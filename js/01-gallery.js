@@ -33,10 +33,8 @@ function handlerImgClick(evt) {
     return;
   }
 
-  const id = evt.target.dataset.source;
-  const item = galleryItems.find(({ original }) => original === id);
   const instance = basicLightbox.create(`
-    <img src="${item.original}" alt="${item.description}">
+    <img src="${evt.target.dataset.source}" alt="${evt.target.alt}">
 `);
 
   instance.show();
