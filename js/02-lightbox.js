@@ -24,6 +24,7 @@ function createMarkup(arr) {
 container.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
 
 const lightbox = new SimpleLightbox(".gallery a", {
+  captionPosition: "button",
   captionsData: "alt",
   captionDelay: 250,
 });
